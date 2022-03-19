@@ -12,8 +12,8 @@ Built with JavaScript, this is an implementation of `berat web app` which has so
 
 ```
 .
-├── src
-├── index.js
+├── backend
+├── frontend
 ├── package.json
 └── README.md
 ```
