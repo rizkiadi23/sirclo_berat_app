@@ -21,4 +21,8 @@ const WeightSchema = mongoose.Schema(
   { timestamps: true }
 );
 
+WeightSchema.set('toJSON', {
+  virtuals: true,
+});
+
 module.exports = mongoose.model('Weight', WeightSchema);

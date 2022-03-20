@@ -3,10 +3,10 @@ const router = express.Router();
 const {
   getWeights,
   getWeight,
+  getWeightStats,
   createWeight,
   updateWeight,
   deleteWeight,
-  getWeightStats,
 } = require('../controllers/weightController');
 
 router.get('/', getWeights);

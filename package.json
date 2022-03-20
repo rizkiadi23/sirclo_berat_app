@@ -4,8 +4,11 @@
   "description": "An simple web app to log body weight",
   "main": "backend/src/app/server.js",
   "scripts": {
-    "start": "node backend/src/server.js",
-    "server": "nodemon backend/src/server.js"
+    "start": "npm run build:frontend && node backend/src/server.js",
+    "server": "nodemon backend/src/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build:frontend": "cd frontend && npm run build && cd ../"
   },
   "repository": {
     "type": "git",
@@ -18,7 +21,6 @@
   },
   "homepage": "https://github.com/rizkiadi23/sirclo_berat_app#readme",
   "dependencies": {
-    "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
