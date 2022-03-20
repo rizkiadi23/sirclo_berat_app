@@ -153,4 +153,5 @@ module.exports = {
   createWeight,
   updateWeight,
   deleteWeight,
+  validateWriteAction,
 };

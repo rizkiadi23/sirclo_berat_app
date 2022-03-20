@@ -68,17 +68,19 @@ npm run start
 open http://localhost:9000
 ```
 
-7. If anything goes well, you can also run the test of these services by running:
+7. If anything goes well, you can also run the unit test for the backend modules by running this command:
 
 ```bash
-npm run test
+npm run unit:test:backend
 ```
 
 8. If you want to see the test result in the browser
 
 ```javascript
-open coverage/index.html
+open coverage/backend/index.html
 ```
+
+9. End to End (E2E) Test & Integration Test with Frontend haven't done yet 😢.
 
 ## 5. Contributing 📝
 

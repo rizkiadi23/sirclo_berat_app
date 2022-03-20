@@ -6,8 +6,10 @@ const connectMongoDB = require('./configs/mongoDb');
 const { errorHandler } = require('./middlewares/errorMiddleware');
 const port = process.env.PORT || 9000;
 
+// Initialize connection with the MongoDB
 connectMongoDB();
 
+// Init Express Server
 const server = express();
 
 // Register Cors Middleware

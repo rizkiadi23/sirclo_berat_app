@@ -8,7 +8,8 @@
     "server": "nodemon backend/src/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build:frontend": "cd frontend && npm run build && cd ../"
+    "build:frontend": "cd frontend && npm run build && cd ../",
+    "unit:test:backend": "nyc _mocha \"./backend/test/unit/**\" --timeout=10000 --recursive --exit"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,30 @@
     "mongoose": "^6.2.7"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
     "concurrently": "^7.0.0",
     "mocha": "^9.2.2",
+    "mockingoose": "^2.15.2",
     "nodemon": "^2.0.15",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "sinon": "^13.0.1"
+  },
+  "nyc": {
+    "include": [
+      "backend/src/controllers/*.js",
+      "backend/src/middlewares/*.js",
+      "backend/src/models/*.js",
+      "backend/src/routes/*.js"
+    ],
+    "exclude": [
+      "backend/src/server.js"
+    ],
+    "reporter": [
+      "html",
+      "text",
+      "lcov",
+      "text-summary"
+    ],
+    "report-dir": "./coverage/backend"
   }
 }
