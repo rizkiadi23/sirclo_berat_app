@@ -36,51 +36,55 @@ To setup this `web app` locally, you can follow these commands from your termina
 git clone https://github.com/rizkiadi23/sirclo_berat_app.git
 ```
 
-2. Install the dependencies by executing:
+2. Go into the project directory and then install backend dependencies by executing:
 
 ```bash
-npm install
+cd sirclo_berat_app && npm install
 ```
 
-3. Create .env file:
+3. After completing installation for the backend, run the following command to install frontend dependencies:
+
+```bash
+cd frontend && npm install
+```
+
+4. Once frontend dependencies successfully installed, go back to the root project directory, by executing:
+
+```bash
+cd ..
+```
+
+5. Create .env file:
 
 ```bash
 cp .env.sample .env
 ```
 
-4. Update NODE_ENV in .env file to `production` and feel free to adjust the MONGO_URI with yours:
-
-```bash
-NODE_ENV=production
-PORT=9000
-MONGO_URI=mongodb://localhost:27017/dbmern
-```
-
-5. From root directory, build and run the service by:
+6. From root directory, build and run the service by:
 
 ```bash
 npm run start
 ```
 
-6. You should be able to check the `Berat Web Apps` via the browser or from terminal by executing:
+7. You should be able to check the `Berat Web Apps` via the browser or from terminal by executing:
 
 ```bash
 open http://localhost:9000
 ```
 
-7. If anything goes well, you can also run the unit test for the backend modules by running this command:
+8. If anything goes well, you can also run the unit test for the backend modules by running this command:
 
 ```bash
 npm run unit:test:backend
 ```
 
-8. If you want to see the test result in the browser
+9. If you want to see the test result in the browser
 
 ```javascript
 open coverage/backend/index.html
 ```
 
-9. End to End (E2E) Test & Integration Test with Frontend haven't done yet 😢.
+10. End to End (E2E) Test & Integration Test with Frontend haven't done yet 😢.
 
 ## 5. Contributing 📝
 
